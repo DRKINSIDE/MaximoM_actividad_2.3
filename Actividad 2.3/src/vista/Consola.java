@@ -34,14 +34,14 @@ public class Consola extends JFrame {
      */
     private void inicializarComponentes() {
         // Crear botones con el texto correspondiente a cada acción
-        btnAgregarProducto = new JButton("1. Agregar Producto");
-        btnAgregarStock = new JButton("2. Agregar Stock");
-        btnRestarStock = new JButton("3. Restar Stock");
-        btnReporteInventario = new JButton("4. Reporte Inventario");
-        btnSalir = new JButton("5. Salir");
+        btnAgregarProducto = new JButton(" Agregar Producto");
+        btnAgregarStock = new JButton(" Agregar Stock");
+        btnRestarStock = new JButton(" Restar Stock");
+        btnReporteInventario = new JButton(" Reporte Inventario");
+        btnSalir = new JButton(" Salir");
 
         // Definir una fuente más grande y negrita para los botones
-        Font fontBotones = new Font("Arial", Font.BOLD, 14);
+        Font fontBotones = new Font("Arial", Font.BOLD, 16);
         btnAgregarProducto.setFont(fontBotones);
         btnAgregarStock.setFont(fontBotones);
         btnRestarStock.setFont(fontBotones);
@@ -51,7 +51,7 @@ public class Consola extends JFrame {
         // Crear un panel con layout de 5 filas y 1 columna para los botones
         JPanel panelBotones = new JPanel(new GridLayout(5, 1, 10, 10));
         // Añadir un borde vacío para separar los botones de los bordes de la ventana
-        panelBotones.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        panelBotones.setBorder(BorderFactory.createEmptyBorder(40, 40, 40, 40));
 
         // Agregar los botones al panel en orden
         panelBotones.add(btnAgregarProducto);
@@ -66,8 +66,8 @@ public class Consola extends JFrame {
 
         // Crear y configurar el título de la ventana
         JLabel titulo = new JLabel("SISTEMA DE GESTIÓN DE INVENTARIO", JLabel.CENTER);
-        titulo.setFont(new Font("Arial", Font.BOLD, 18));
-        titulo.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        titulo.setFont(new Font("Arial", Font.BOLD, 20));
+        titulo.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
         add(titulo, BorderLayout.NORTH); // Título en la parte superior
     }
 
@@ -78,7 +78,7 @@ public class Consola extends JFrame {
     private void configurarVentana() {
         setTitle("Sistema de Gestión de Inventario"); // Título de la ventana
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Cerrar aplicación al salir
-        setSize(400, 450); // Tamaño fijo de la ventana
+        setSize(800, 1000); // Tamaño fijo de la ventana
         setLocationRelativeTo(null); // Centrar ventana en pantalla
         setResizable(false); // No permitir redimensionar
     }

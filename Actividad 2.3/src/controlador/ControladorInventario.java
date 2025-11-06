@@ -11,16 +11,16 @@ public class ControladorInventario {
     private final Bodega bodega; // Modelo: almacena productos y stock
     private final Consola vista; // Vista: interfaz con el usuario
 
-    // Constructor: recibe modelo y vista, y configura los eventos de la interfaz
+     // Constructor: recibe modelo y vista, y configura los eventos de la interfaz
     public ControladorInventario(Bodega bodega, Consola vista) {
         this.bodega = bodega;
         this.vista = vista;
         configurarListeners();
-        System.out.println("--- SISTEMA DE GESTIÓN DE INVENTARIO---");
+        System.out.println("---  GESTIÓN DE INVENTARIO---");
         System.out.println("Los resultados se mostrarán en esta terminal\n");
     }
 
-    // Asocia los botones de la vista con los métodos del controlador
+     // Asocia los botones de la vista con los métodos del controlador
     private void configurarListeners() {
         vista.setAgregarProductoListener(e -> agregarProducto());
         vista.setAgregarStockListener(e -> agregarStock());
@@ -32,7 +32,7 @@ public class ControladorInventario {
         });
     }
     
-    // Agrega un producto nuevo o suma stock si ya existe
+         // Agrega un producto nuevo o suma stock si ya existe
     private void agregarProducto() {
         System.out.println("\n--- AGREGAR PRODUCTO ---");
         // Solicita el nombre del producto al usuario
